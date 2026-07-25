@@ -1,0 +1,15 @@
+name: Poll Telegram Sources
+
+on:
+  schedule:
+    - cron: "*/4 * * * *"
+  workflow_dispatch: {}   # lets you trigger it manually too, for testing
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger /pull_sources webhook
+        run: |
+          curl -sS --max-time 20 -o /dev/null -w "HTTP %{http_code}\n" \
+            "${{ secrets.PULL_SOURCES_WEBHOOK_URL }}"
