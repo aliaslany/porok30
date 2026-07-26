@@ -1,6 +1,6 @@
 # porok30 Forwarder
-
-A Telegram bot that watches public channels for MTProto proxy links, wraps them in
+a mechanism which i call [Read(review),Modify,Send]
+A Telegram bot that watches public channels , wraps them in
 a nicely formatted post with a rotating quote, and forwards them — with clickable
 "Proxy 1 / Proxy 2 / ..." buttons — to one or more destination channels across
 Telegram, Bale, and Rubika.
